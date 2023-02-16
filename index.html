@@ -9,3 +9,39 @@
   <p>Please call us at <a href="tel:+919999676710">+91 9999676710</a> to place your order!</p>
 </body>
 </html>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Fullscreen Image</title>
+	<style>
+		body {
+			margin: 0;
+			padding: 0;
+			overflow: hidden;
+		}
+		img {
+			max-width: 100%;
+			max-height: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			margin: auto;
+		}
+	</style>
+	<script>
+		function toggleFullScreen() {
+			var img = document.getElementById("fullscreen-img");
+			if (!document.fullscreenElement) {
+				img.requestFullscreen();
+			} else {
+				document.exitFullscreen();
+			}
+		}
+	</script>
+</head>
+<body>
+	<img id="fullscreen-img" src="your-image.png" onclick="toggleFullScreen()">
+</body>
+</html>
