@@ -1,47 +1,45 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>requestFullscreen()welcome to FFC Restaurant this is the Menu</title>
-</head>
-<body>
-  <h1>welcome to FFC Restaurant this is the Menu</h1>
-  <img src="https://b.zmtcdn.com/data/menus/418/18374418/d76331e092dbbb0fdfb74321885342ad.jpg?fit=around%7C200%3A200&crop=200%3A200%3B%2A%2C%2A" alt="Menu">
-  <p>Please call us at <a href="tel:+919999676710">+91 9999676710</a> to place your order!</p>
-</body>
+  <head>
+    <title>My Restaurant</title>
+    <style>
+      #myButton {
+        background-color: #ffcc00;
+        border: none;
+        padding: 10px 20px;
+        font-size: 20px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        margin-top: 20px;
+      }
+
+      #myButton:hover {
+        transform: scale(1.1);
+      }
+
+      .menu {
+        display: inline-block;
+        margin-top: 20px;
+      }
+
+      .menu img {
+        width: 100%;
+        max-width: 500px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+
+      .menu img:hover {
+        transform: scale(1.1);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="menu">
+      <a href="tel:+919999676710"><img src="https://i.imgur.com/SNmwpbc.jpg" alt="My Restaurant Menu"></a>
+    </div>
+    <button id="myButton" onclick="alert('Please call us at +91 9999676710 to place your order.')">Call to Order</button>
+  </body>
 </html>
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Fullscreen Image</title>
-	<style>
-		body {
-			margin: 0;
-			padding: 0;
-			overflow: hidden;
-		}
-		img {
-			max-width: 100%;
-			max-height: 100%;
-			position: absolute;
-			top: 0;
-			left: 0;
-			right: 0;
-			bottom: 0;
-			margin: auto;
-		}
-	</style>
-	<script>
-		function toggleFullScreen() {
-			var img = document.getElementById("fullscreen-img");
-			if (!document.fullscreenElement) {
-				img.requestFullscreen();
-			} else {
-				document.exitFullscreen();
-			}
-		}
-	</script>
-</head>
-<body>
-	<img id="fullscreen-img" src="your-image.png" onclick="toggleFullScreen()">
-</body>
-</html>
+
