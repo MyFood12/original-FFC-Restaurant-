@@ -19,7 +19,9 @@
       }
 
       .menu {
-        display: inline-block;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         margin-top: 20px;
       }
 
@@ -33,13 +35,27 @@
       .menu img:hover {
         transform: scale(1.1);
       }
+
+      .menu a {
+        display: block;
+        margin-top: 10px;
+        background-color: #ADD8E6;
+        padding: 5px 10px;
+        border-radius: 10px;
+        transition: all 0.3s ease;
+      }
+
+      .menu a:hover {
+        background-color: #87CEFA;
+        transform: scale(1.1);
+      }
     </style>
   </head>
   <body>
     <div class="menu">
-      <a href="tel:+919999676710"><img src="https://i.imgur.com/SNmwpbc.jpg" alt="My Restaurant Menu"></a>
+      <a href="tel:+919999676710">Call us at +91 9999676710 to place your order.</a>
+      <img src="https://i.imgur.com/SNmwpbc.jpg" alt="My Restaurant Menu" onclick="this.style.transform='scale(1.1)';document.body.style.backgroundColor='#ADD8E6'">
     </div>
     <button id="myButton" onclick="alert('Please call us at +91 9999676710 to place your order.')">Call to Order</button>
   </body>
 </html>
-
