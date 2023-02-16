@@ -2,77 +2,123 @@
 <html>
 <head>
 	<title>FFC Restaurant</title>
-	<style>
-		/* Add styles to the lines */
-		.line {
-			height: 17px;
-			width: 1px;
-			background-color: black;
-			display: inline-block;
-			margin-right: 2px;
-		}
-		/* Add hover styles to the lines */
-		.line:hover {
-			cursor: pointer;
-			background-color: lightgray;
-		}
-		/* Add styles to the options container */
-		.options {
-			display: none;
-			position: absolute;
-			background-color: white;
-			border: 1px solid black;
-			padding: 10px;
-			z-index: 1;
-		}
-		/* Add styles to the option links */
-		.option-link {
-			display: block;
-			margin-bottom: 10px;
-		}
-	</style>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-	<!-- Add the three vertical lines and options container -->
-	<div class="menu-icon" onclick="showOptions()">
-		<div class="line"></div>
-		<div class="line"></div>
-		<div class="line"></div>
-		<div class="options" id="options">
-			<a href="#">View full menu</a>
-			<a href="#">Location</a>
+	<header>
+		<div class="header-container">
+			<div class="menu-icon">
+				<span class="line"></span>
+				<span class="line"></span>
+				<span class="line"></span>
+			</div>
+			<div class="logo-container">
+				<img src="https://imgur.com/5DRVELS" alt="FFC Restaurant" class="logo">
+			</div>
+			<nav>
+				<ul class="nav-links">
+					<li><a href="#">View Full Menu</a></li>
+					<li><a href="#">Location</a></li>
+				</ul>
+			</nav>
 		</div>
-	</div>
+	</header>
 
-	<!-- Add the restaurant name and logo -->
-	<h1>Welcome to FFC Restaurant</h1>
-	<img src="https://i.imgur.com/5DRVELS.png" alt="FFC Restaurant Logo" style="width: 200px; height: 200px; border-radius: 50%;">
+	<main>
+		<div class="call-container">
+			<div class="call-button">
+				<a href="tel:+919999676710">Click here to make a call</a>
+			</div>
+			<div class="call-text">
+				<p>Call us at +91 9999676710 to place your order.</p>
+			</div>
+		</div>
+		<div class="image-container">
+			<a href="tel:+919999676710">
+				<img src="https://i.imgur.com/SNmwpbc.png" alt="Image 1" class="menu-image">
+			</a>
+			<a href="tel:+919999676710">
+				<img src="https://i.imgur.com/xEjgxgQ.png" alt="Image 2" class="menu-image">
+			</a>
+		</div>
+		<div class="image-container">
+			<a href="tel:+919999676710">
+				<img src="https://i.imgur.com/9jPdUHF.png" alt="Image 3" class="menu-image">
+			</a>
+			<a href="tel:+919999676710">
+				<img src="https://i.imgur.com/lBfSzMk.png" alt="Image 4" class="menu-image">
+			</a>
+		</div>
+	</main>
 
-	<!-- Add the menu image and click-to-call button -->
-	<div>
-		<a href="tel:+919999676710"><img src="https://i.imgur.com/SNmwpbc.png" alt="Menu" style="width: 600px;"></a>
-	</div>
-	<button onclick="makeCall()">Click here to make a call</button>
-
-	<!-- Add the other images -->
-	<img src="https://i.imgur.com/9jPdUHF.png" alt="Image 1" style="width: 200px;">
-	<img src="https://i.imgur.com/lBfSzMk.png" alt="Image 2" style="width: 200px;">
-
-	<script>
-		// Show or hide the options container
-		function showOptions() {
-			var options = document.getElementById("options");
-			if (options.style.display === "block") {
-				options.style.display = "none";
-			} else {
-				options.style.display = "block";
-			}
-		}
-
-		// Call the restaurant when the button is clicked
-		function makeCall() {
-			location.href = "tel:+919999676710";
-		}
-	</script>
+	<script type="text/javascript" src="script.js"></script>
 </body>
 </html>
+/* General Styles */
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: Arial, sans-serif;
+}
+
+a {
+	text-decoration: none;
+}
+
+/* Header Styles */
+
+header {
+	background-color: #f2f2f2;
+	padding: 10px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+}
+
+.header-container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.menu-icon {
+	display: none;
+}
+
+.menu-icon .line {
+	display: block;
+	width: 25px;
+	height: 3px;
+	background-color: #333;
+	margin: 5px;
+}
+
+.logo {
+	width: 200px;
+	height: 200px;
+	border-radius: 50%;
+}
+
+nav {
+	display: flex;
+}
+
+.nav-links {
+	display: flex;
+}
+
+.nav-links li {
+	margin-left: 20px;
+}
+
+/* Main Styles */
+
+.call-container {
+	background-color: #fff;
+	display: flex;
+	flex-direction
