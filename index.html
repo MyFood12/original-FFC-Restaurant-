@@ -1,58 +1,150 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>FFC Restaurant</title>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" type="text/css" href="style.css">
-</head>
-<body>
-	<header>
-		<div class="header-container">
-			<div class="menu-icon">
-				<span class="line"></span>
-				<span class="line"></span>
-				<span class="line"></span>
-			</div>
-			<div class="logo-container">
-				<img src="https://imgur.com/5DRVELS" alt="FFC Restaurant" class="logo">
-			</div>
-			<nav>
-				<ul class="nav-links">
-					<li><a href="#">View Full Menu</a></li>
-					<li><a href="#">Location</a></li>
-				</ul>
-			</nav>
-		</div>
-	</header>
+  <head>
+    <title>FFC Restaurant</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
 
-	<main>
-		<div class="call-container">
-			<div class="call-button">
-				<a href="tel:+919999676710">Click here to make a call</a>
-			</div>
-			<div class="call-text">
-				<p>Call us at +91 9999676710 to place your order.</p>
-			</div>
-		</div>
-		<div class="image-container">
-			<a href="tel:+919999676710">
-				<img src="https://i.imgur.com/SNmwpbc.png" alt="Image 1" class="menu-image">
-			</a>
-			<a href="tel:+919999676710">
-				<img src="https://i.imgur.com/xEjgxgQ.png" alt="Image 2" class="menu-image">
-			</a>
-		</div>
-		<div class="image-container">
-			<a href="tel:+919999676710">
-				<img src="https://i.imgur.com/9jPdUHF.png" alt="Image 3" class="menu-image">
-			</a>
-			<a href="tel:+919999676710">
-				<img src="https://i.imgur.com/lBfSzMk.png" alt="Image 4" class="menu-image">
-			</a>
-		</div>
-	</main>
+      .header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px;
+        background-color: #f2f2f2;
+      }
 
-	<script type="text/javascript" src="script.js"></script>
-</body>
-</html>
+      .logo {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        margin-right: 10px;
+      }
+
+      .menu {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+      }
+
+      h1 {
+        font-size: 30px;
+        margin-top: 0;
+      }
+
+      p {
+        font-size: 20px;
+        margin-bottom: 0;
+      }
+
+      .phone {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+      }
+
+      .phone img {
+        width: 25px;
+        height: 25px;
+        margin-right: 10px;
+      }
+
+      .menu img {
+        width: 100%;
+        height: auto;
+        max-width: 300px;
+        margin: 20px;
+        border-radius: 10px;
+      }
+
+      .menu a {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #4CAF50;
+        color: white;
+        font-size: 20px;
+        text-decoration: none;
+        border-radius: 10px;
+        margin: 20px;
+      }
+
+      .menu a:hover {
+        background-color: #3e8e41;
+      }
+
+      .menu a:focus {
+        outline: none;
+        background-color: #3e8e41;
+        transform: scale(1.05);
+      }
+
+      .menu .lines {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin: 20px;
+      }
+
+      .menu .lines img {
+        width: 15px;
+        height: 17px;
+        margin-right: 10px;
+      }
+
+      .menu .lines a {
+        display: block;
+        margin-top: 5px;
+        font-size: 16px;
+        color: #666;
+        text-decoration: none;
+      }
+
+      .menu .lines a:hover {
+        color: black;
+        font-weight: bold;
+      }
+
+      .menu .popup {
+        position: absolute;
+        top: 70px;
+        right: 0;
+        padding: 20px;
+        background-color: #f2f2f2;
+        border: 1px solid black;
+        border-radius: 10px;
+        z-index: 1;
+        display: none;
+      }
+
+      .menu .popup a {
+        display: block;
+        margin-top: 10px;
+        font-size: 16px;
+        color: #666;
+        text-decoration: none;
+      }
+
+      .menu .popup a:hover {
+        color: black;
+        font-weight: bold;
+      }
+
+      .menu .lines:focus + .popup {
+        display: block;
+      }
+
+      @media only screen and (min-width: 768px) {
+        .menu {
+          flex-direction: row;
+        }
+
+        h1 {
+          font-size: 50px;
+        }
+
+        .menu img {
+         
