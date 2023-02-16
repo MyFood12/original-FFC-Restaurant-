@@ -1,143 +1,78 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Welcome to FFC Restaurant</title>
-    <style>
-      #menu {
-        width: 100%;
-        height: 100%;
-        background-image: url('https://i.imgur.com/gUg09Mx.png');
-        background-size: cover;
-        position: fixed;
-        top: 0;
-        left: 0;
-        display: none;
-      }
+<head>
+	<title>FFC Restaurant</title>
+	<style>
+		/* Add styles to the lines */
+		.line {
+			height: 17px;
+			width: 1px;
+			background-color: black;
+			display: inline-block;
+			margin-right: 2px;
+		}
+		/* Add hover styles to the lines */
+		.line:hover {
+			cursor: pointer;
+			background-color: lightgray;
+		}
+		/* Add styles to the options container */
+		.options {
+			display: none;
+			position: absolute;
+			background-color: white;
+			border: 1px solid black;
+			padding: 10px;
+			z-index: 1;
+		}
+		/* Add styles to the option links */
+		.option-link {
+			display: block;
+			margin-bottom: 10px;
+		}
+	</style>
+</head>
+<body>
+	<!-- Add the three vertical lines and options container -->
+	<div class="menu-icon" onclick="showOptions()">
+		<div class="line"></div>
+		<div class="line"></div>
+		<div class="line"></div>
+		<div class="options" id="options">
+			<a href="#">View full menu</a>
+			<a href="#">Location</a>
+		</div>
+	</div>
 
-      #menu img {
-        width: 100%;
-        height: 100%;
-      }
+	<!-- Add the restaurant name and logo -->
+	<h1>Welcome to FFC Restaurant</h1>
+	<img src="https://i.imgur.com/5DRVELS.png" alt="FFC Restaurant Logo" style="width: 200px; height: 200px; border-radius: 50%;">
 
-      #menu a {
-        position: absolute;
-        top: 10px;
-        right: 10px;
-        font-size: 18px;
-        color: white;
-        text-decoration: none;
-      }
+	<!-- Add the menu image and click-to-call button -->
+	<div>
+		<a href="tel:+919999676710"><img src="https://i.imgur.com/SNmwpbc.png" alt="Menu" style="width: 600px;"></a>
+	</div>
+	<button onclick="makeCall()">Click here to make a call</button>
 
-      #location {
-        width: 100%;
-        height: 100%;
-        background-image: url('https://i.imgur.com/2hGkK0e.jpg');
-        background-size: cover;
-        position: fixed;
-        top: 0;
-        left: 0;
-        display: none;
-      }
+	<!-- Add the other images -->
+	<img src="https://i.imgur.com/9jPdUHF.png" alt="Image 1" style="width: 200px;">
+	<img src="https://i.imgur.com/lBfSzMk.png" alt="Image 2" style="width: 200px;">
 
-      #location img {
-        width: 100%;
-        height: 100%;
-      }
+	<script>
+		// Show or hide the options container
+		function showOptions() {
+			var options = document.getElementById("options");
+			if (options.style.display === "block") {
+				options.style.display = "none";
+			} else {
+				options.style.display = "block";
+			}
+		}
 
-      #location a {
-        position: absolute;
-        top: 10px;
-        right: 10px;
-        font-size: 18px;
-        color: white;
-        text-decoration: none;
-      }
-
-      .click-to-call {
-        display: flex;
-        align-items: center;
-        margin-top: 20px;
-      }
-
-      .click-to-call img {
-        width: 100px;
-        height: 100px;
-        border-radius: 50%;
-        margin-right: 20px;
-      }
-
-      .click-to-call span {
-        font-size: 24px;
-        font-weight: bold;
-        margin-right: 20px;
-      }
-
-      .click-to-call a {
-        display: block;
-        background-color: #b22222;
-        color: white;
-        text-decoration: none;
-        padding: 10px 20px;
-        border-radius: 5px;
-        font-size: 18px;
-      }
-
-      .logo {
-        width: 200px;
-        height: 200px;
-        border-radius: 50%;
-        margin: 20px;
-      }
-
-      .menu-img {
-        width: 400px;
-        height: 400px;
-        margin: 20px;
-      }
-
-      .menu-img:hover {
-        transform: scale(1.1);
-      }
-
-      .sub-menu-img {
-        width: 200px;
-        height: 200px;
-        margin: 20px;
-      }
-
-      .sub-menu-img:hover {
-        transform: scale(1.1);
-      }
-
-      .vertical-line {
-        width: 15px;
-        height: 17px;
-        position: absolute;
-        left: 20px;
-        top: 20px;
-        cursor: pointer;
-      }
-
-      .vertical-line:hover .submenu {
-        display: block;
-      }
-
-      .submenu {
-        display: none;
-        position: absolute;
-        background-color: #ffffff;
-        padding: 10px;
-        border-radius: 5px;
-        top: 40px;
-        left: 5px;
-        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-      }
-
-      .submenu a {
-        display: block;
-        margin-bottom: 10px;
-        font-size: 16px;
-        color: #000000;
-        text-decoration: none;
-      }
-    </style>
+		// Call the restaurant when the button is clicked
+		function makeCall() {
+			location.href = "tel:+919999676710";
+		}
+	</script>
+</body>
+</html>
