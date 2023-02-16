@@ -1,111 +1,143 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>Welcome to FFC Restaurant</title>
-	<style>
-		body {
-			margin: 0;
-			padding: 0;
-			font-family: Arial, sans-serif;
-		}
-		.header {
-			display: flex;
-			align-items: center;
-			background-color: #F8F8F8;
-			height: 60px;
-			padding: 0 20px;
-			box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-		}
-		.logo {
-			height: 40px;
-			width: 40px;
-			border-radius: 50%;
-			margin-right: 10px;
-		}
-		.menu {
-			display: flex;
-			flex-wrap: wrap;
-			justify-content: space-around;
-			align-items: center;
-			margin-top: 20px;
-		}
-		.menu img {
-			width: 250px;
-			height: 300px;
-			margin: 20px;
-			border-radius: 10px;
-			cursor: pointer;
-		}
-		.number {
-			font-size: 18px;
-			font-weight: bold;
-			margin-top: 20px;
-		}
-		.btn {
-			display: inline-block;
-			padding: 8px 20px;
-			font-size: 20px;
-			font-weight: bold;
-			text-align: center;
-			color: #fff;
-			background-color: #1e90ff;
-			border: none;
-			border-radius: 5px;
-			cursor: pointer;
-			margin-top: 10px;
-		}
-		.btn:hover {
-			background-color: #0080ff;
-		}
-		.option-box {
-			position: absolute;
-			top: 55px;
-			left: 0px;
-			display: none;
-			background-color: #F8F8F8;
-			box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-			padding: 10px;
-			z-index: 1;
-		}
-		.line {
-			height: 15px;
-			width: 2px;
-			background-color: #000;
-			margin: 2px 0;
-			cursor: pointer;
-		}
-		.line-container {
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-			margin-top: 20px;
-		}
-		.option {
-			padding: 10px;
-			cursor: pointer;
-		}
-		.option:hover {
-			background-color: #e6e6e6;
-		}
-		.round-image {
-			border-radius: 50%;
-			height: 200px;
-			width: 200px;
-			margin-top: 20px;
-		}
-	</style>
-</head>
-<body>
-	<div class="header">
-		<img src="https://i.imgur.com/5DRVELS.png" alt="FFC Restaurant Logo" class="logo">
-		<h1>Welcome to FFC Restaurant</h1>
-	</div>
-	<div class="menu">
-		<a href="#">
-			<img src="https://i.imgur.com/SNmwpbc.png" alt="Menu Item 1">
-		</a>
-		<a href="#">
-			<img src="https://i.imgur.com/xEjgxgQ.png" alt="Menu Item 2">
-		</a>
-		<a href="#">
-			<img src="https://i
+  <head>
+    <title>Welcome to FFC Restaurant</title>
+    <style>
+      #menu {
+        width: 100%;
+        height: 100%;
+        background-image: url('https://i.imgur.com/gUg09Mx.png');
+        background-size: cover;
+        position: fixed;
+        top: 0;
+        left: 0;
+        display: none;
+      }
+
+      #menu img {
+        width: 100%;
+        height: 100%;
+      }
+
+      #menu a {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        font-size: 18px;
+        color: white;
+        text-decoration: none;
+      }
+
+      #location {
+        width: 100%;
+        height: 100%;
+        background-image: url('https://i.imgur.com/2hGkK0e.jpg');
+        background-size: cover;
+        position: fixed;
+        top: 0;
+        left: 0;
+        display: none;
+      }
+
+      #location img {
+        width: 100%;
+        height: 100%;
+      }
+
+      #location a {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        font-size: 18px;
+        color: white;
+        text-decoration: none;
+      }
+
+      .click-to-call {
+        display: flex;
+        align-items: center;
+        margin-top: 20px;
+      }
+
+      .click-to-call img {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        margin-right: 20px;
+      }
+
+      .click-to-call span {
+        font-size: 24px;
+        font-weight: bold;
+        margin-right: 20px;
+      }
+
+      .click-to-call a {
+        display: block;
+        background-color: #b22222;
+        color: white;
+        text-decoration: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        font-size: 18px;
+      }
+
+      .logo {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        margin: 20px;
+      }
+
+      .menu-img {
+        width: 400px;
+        height: 400px;
+        margin: 20px;
+      }
+
+      .menu-img:hover {
+        transform: scale(1.1);
+      }
+
+      .sub-menu-img {
+        width: 200px;
+        height: 200px;
+        margin: 20px;
+      }
+
+      .sub-menu-img:hover {
+        transform: scale(1.1);
+      }
+
+      .vertical-line {
+        width: 15px;
+        height: 17px;
+        position: absolute;
+        left: 20px;
+        top: 20px;
+        cursor: pointer;
+      }
+
+      .vertical-line:hover .submenu {
+        display: block;
+      }
+
+      .submenu {
+        display: none;
+        position: absolute;
+        background-color: #ffffff;
+        padding: 10px;
+        border-radius: 5px;
+        top: 40px;
+        left: 5px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      }
+
+      .submenu a {
+        display: block;
+        margin-bottom: 10px;
+        font-size: 16px;
+        color: #000000;
+        text-decoration: none;
+      }
+    </style>
