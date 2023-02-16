@@ -2,51 +2,110 @@
 <html>
 <head>
 	<title>Welcome to FFC Restaurant</title>
-	<style type="text/css">
-		#logo {
-			display: block;
-			margin: 0 auto;
+	<style>
+		body {
+			margin: 0;
+			padding: 0;
+			font-family: Arial, sans-serif;
+		}
+		.header {
+			display: flex;
+			align-items: center;
+			background-color: #F8F8F8;
+			height: 60px;
+			padding: 0 20px;
+			box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+		}
+		.logo {
+			height: 40px;
+			width: 40px;
 			border-radius: 50%;
-			width: 200px;
-			height: 200px;
+			margin-right: 10px;
 		}
-		#menu {
-			display: block;
-			margin: 0 auto;
-			width: 500px;
-			height: auto;
+		.menu {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-around;
+			align-items: center;
+			margin-top: 20px;
 		}
-		.call-to-action {
-			display: block;
-			margin: 20px auto;
-			padding: 10px 20px;
-			font-size: 24px;
+		.menu img {
+			width: 250px;
+			height: 300px;
+			margin: 20px;
+			border-radius: 10px;
+			cursor: pointer;
+		}
+		.number {
+			font-size: 18px;
+			font-weight: bold;
+			margin-top: 20px;
+		}
+		.btn {
+			display: inline-block;
+			padding: 8px 20px;
+			font-size: 20px;
 			font-weight: bold;
 			text-align: center;
-			background-color: #FFC107;
 			color: #fff;
-			border-radius: 20px;
-			text-decoration: none;
-		}
-		.call-to-action:hover {
-			background-color: #FFA000;
+			background-color: #1e90ff;
+			border: none;
+			border-radius: 5px;
 			cursor: pointer;
+			margin-top: 10px;
+		}
+		.btn:hover {
+			background-color: #0080ff;
+		}
+		.option-box {
+			position: absolute;
+			top: 55px;
+			left: 0px;
+			display: none;
+			background-color: #F8F8F8;
+			box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+			padding: 10px;
+			z-index: 1;
+		}
+		.line {
+			height: 15px;
+			width: 2px;
+			background-color: #000;
+			margin: 2px 0;
+			cursor: pointer;
+		}
+		.line-container {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			margin-top: 20px;
+		}
+		.option {
+			padding: 10px;
+			cursor: pointer;
+		}
+		.option:hover {
+			background-color: #e6e6e6;
+		}
+		.round-image {
+			border-radius: 50%;
+			height: 200px;
+			width: 200px;
+			margin-top: 20px;
 		}
 	</style>
 </head>
 <body>
-	<h1>Welcome to FFC Restaurant</h1>
-	<img id="logo" src="https://i.imgur.com/5DRVELS.png" alt="FFC Restaurant logo">
-	<br><br>
-	<img id="menu" src="https://i.imgur.com/SNmwpbc.jpg" alt="FFC Restaurant Menu">
-	<br><br>
-	<div>
-		<a href="tel:+919999676710" class="call-to-action">Click here to make a call</a>
+	<div class="header">
+		<img src="https://i.imgur.com/5DRVELS.png" alt="FFC Restaurant Logo" class="logo">
+		<h1>Welcome to FFC Restaurant</h1>
 	</div>
-	<br><br>
-	<img src="https://i.imgur.com/xEjgxgQ.jpg" alt="Image 1" width="200" height="200">
-	<img src="https://i.imgur.com/9jPdUHF.jpg" alt="Image 2" width="200" height="200">
-	<img src="https://i.imgur.com/lBfSzMk.jpg" alt="Image 3" width="200" height="200">
-	<p>Call us at +91 9999676710 to place your order.</p>
-</body>
-</html>
+	<div class="menu">
+		<a href="#">
+			<img src="https://i.imgur.com/SNmwpbc.png" alt="Menu Item 1">
+		</a>
+		<a href="#">
+			<img src="https://i.imgur.com/xEjgxgQ.png" alt="Menu Item 2">
+		</a>
+		<a href="#">
+			<img src="https://i
