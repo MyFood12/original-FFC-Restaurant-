@@ -1,66 +1,77 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>FFC Restaurant</title>
-    <style>
-      body {
-        margin: 0;
-        padding: 0;
-      }
-      .header {
-        background-color: #ffffff;
-        padding: 20px;
-        text-align: center;
-      }
-      .header img {
-        height: 200px;
-        width: 200px;
-      }
-      .menu {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
-        padding: 20px;
-      }
-      .menu img {
-        height: 250px;
-        width: 250px;
-        margin: 20px;
-      }
-      .menu img:last-child {
-        border-radius: 50%;
-      }
-      .call-to-action {
-        background-color: #ffffff;
-        padding: 20px;
-        text-align: center;
-      }
-      .call-to-action a {
-        display: block;
-        font-size: 24px;
-        font-weight: bold;
-        color: #333333;
-        text-decoration: none;
-        margin-top: 20px;
-      }
-    </style>
-  </head>
-  <body>
-    <div class="header">
-      <img src="https://imgur.com/5DRVELS" alt="FFC Restaurant" />
-      <h1>Welcome to FFC Restaurant</h1>
-    </div>
-    <div class="menu">
-      <img src="https://i.imgur.com/SNmwpbc.png" alt="Menu" />
-      <a href="tel:+919999676710">
-        <img src="https://i.imgur.com/IiFBprb.png" alt="Call to Order" />
-      </a>
-      <img src="https://i.imgur.com/xEjgxgQ.png" alt="Special Offer" />
-    </div>
-    <div class="call-to-action">
-      <p>Call us at +91 9999676710 to place your order.</p>
-      <a href="tel:+919999676710">Click here to make a call</a>
-    </div>
-  </body>
+<head>
+	<title>FFC Restaurant</title>
+	<style type="text/css">
+		body {
+			margin: 0;
+			padding: 0;
+			font-family: sans-serif;
+			background-color: #f5f5f5;
+		}
+
+		.container {
+			max-width: 1200px;
+			margin: 0 auto;
+			padding: 20px;
+			box-sizing: border-box;
+		}
+
+		.header {
+			display: flex;
+			align-items: center;
+			margin-bottom: 20px;
+		}
+
+		.header img {
+			width: 200px;
+			height: 200px;
+			object-fit: cover;
+			border-radius: 50%;
+			margin-right: 20px;
+		}
+
+		.menu {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+		}
+
+		.menu img {
+			width: 48%;
+			margin-bottom: 20px;
+			cursor: pointer;
+		}
+
+		.call-to-order {
+			display: block;
+			background-color: #fa6d6d;
+			color: #fff;
+			font-size: 24px;
+			font-weight: bold;
+			padding: 20px;
+			text-align: center;
+			border-radius: 5px;
+			margin-top: 20px;
+			cursor: pointer;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<header class="header">
+			<img src="https://i.imgur.com/5DRVELS.png" alt="FFC Restaurant">
+			<h1>Welcome to FFC Restaurant</h1>
+		</header>
+		
+		<div class="menu">
+			<a href="tel:+919999676710"><img src="https://i.imgur.com/SNmwpbc.jpg" alt="Menu"></a>
+			<a href="tel:+919999676710"><img src="https://i.imgur.com/xEjgxgQ.jpg" alt="Menu"></a>
+		</div>
+
+		<a href="tel:+919999676710" class="call-to-order">Click here to make a call</a>
+		
+		<p>Call us at +91 9999676710 to place your order.</p>
+	</div>
+</body>
 </html>
